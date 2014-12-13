@@ -287,10 +287,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #212121 url("https://raw.githubusercontent.com/John-O-Really/Firefox-Transparent/gh-pages/images/headerimage.jpg") fixed center; ;
+  background: #212121 url("https://raw.githubusercontent.com/John-O-Really/Firefox-Transparent/gh-pages/images/headerimage.jpg") fixed;
+  z-index: 0;
 }
 
-#header_wrap:after {
+#header_wrap:before {
+  z-index: 1;
   opacity: 0.3;
   background: -moz-linear-gradient(top, #373737, #212121);
   background: -webkit-linear-gradient(top, #373737, #212121);
