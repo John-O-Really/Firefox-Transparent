@@ -1,0 +1,120 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*Transparent background */
+#TabsToolbar{ 
+  background: rgba(255,255,255, 0.15) !important; 
+  color: #000;
+}
+
+#TabsToolbar:not(:-moz-lwtheme):after {
+    box-shadow: 0px 0px 30px 30px rgba(220, 220, 220, 0.1);
+}
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(:-moz-lwtheme), #browser-bottombox:not(:-moz-lwtheme), .browserContainer > findbar {
+    background-color: rgba(220, 220, 220, 0.1);
+  
+}
+
+
+
+
+.tabbrowser-tab[selected="true"]{
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%); 
+  z-index: 1;
+   transition: all 0.15s ease 0s !important;
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+}
+
+
+
+.tab-background[selected="true"] {
+  /* Explicitly set the visibility to override the value (collapsed)
+   * we inherit from #TabsToolbar[collapsed] upon opening a browser window. */
+  visibility: visible;
+  opacity: 0;
+}
+
+.tabbrowser-tab[selected] { margin-top: -2px !important; 
+background-position: -20px 0px;
+}
+ 
+.tab-background-middle {
+border-left: none !important;
+border-right: none !important;
+margin: 0 -0.5px !important;
+}
+ 
+.tab-background,
+.tabs-newtab-button {
+-moz-margin-end: 0 !important;
+-moz-margin-start: 0.5px !important;
+}
+ 
+.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+-moz-padding-end: 0 !important;
+-moz-padding-start: 0 !important;
+}
+ 
+.tab-background-start[selected=true]::after,
+.tab-background-start[selected=true]::before,
+.tab-background-start,
+.tab-background-end,
+.tab-background-end[selected=true]::after,
+.tab-background-end[selected=true]::before {
+width: 1px !important;
+}
+ 
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
+.tabs-newtab-button:hover {
+background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.0) 60%, rgba(255,255,255,0.4)) !important;
+background-size: 100% !important;
+     transition: all 0.15s ease 0s !important;;
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+}
+ 
+#tabbrowser-tabs[movingtab] > .tabbrowser-tab[afterselected]::before,
+.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([first-visible-tab])::before,
+#tabbrowser-tabs[overflow] > .tabbrowser-tab[first-visible-tab]:not([selected])::before,
+#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab:not([selected])::after {
+-moz-margin-start: -1.5px !important;
+-moz-margin-end: -1.5px !important;
+background-image: url(chrome://browser/skin/tabbrowser/tab-separator.png) !important;
+background-size: 3px 100% !important;
+content: "" !important;
+display: -moz-box !important;
+margin-bottom: 1px !important;
+width: 3px !important;
+}
+ 
+.tabbrowser-tab[selected]::before,
+.tabbrowser-tab[selected]::after {
+-moz-margin-start: -0.5px !important;
+-moz-margin-end: -0.5px !important;
+background-color: #aaa !important;
+background-size: 1px 100% !important;
+content: "" !important;
+display: -moz-box !important;
+margin-bottom: 1px !important;
+width: 1px !important;
+}
+ 
+.tabbrowser-tab[selected][first-visible-tab]::before {
+background-color: #eee !important;
+background-size: 1px 100% !important;
+}
+ 
+.tabs-newtab-button { width: 32px !important; } 
+
+
+
+
+
+
+
+
