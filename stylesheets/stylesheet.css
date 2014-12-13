@@ -290,7 +290,7 @@ Full-Width Styles
   background: #212121 url("https://raw.githubusercontent.com/John-O-Really/Firefox-Transparent/gh-pages/images/headerimage.jpg") fixed center; ;
 }
 
-header_wrap:after {
+#header_wrap:after {
   opacity: 0.3;
   background: -moz-linear-gradient(top, #373737, #212121);
   background: -webkit-linear-gradient(top, #373737, #212121);
