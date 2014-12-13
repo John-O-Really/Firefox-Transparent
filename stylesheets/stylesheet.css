@@ -293,7 +293,7 @@ Full-Width Styles
   background: -ms-linear-gradient(top, #373737, #212121);
   background: -o-linear-gradient(top, #373737, #212121);
   background: linear-gradient(top, #373737, #212121);
-  background-image: url("https://raw.githubusercontent.com/John-O-Really/Firefox-Transparent/gh-pages/images/headerimage.jpg");
+  background-image: url("https://raw.githubusercontent.com/John-O-Really/Firefox-Transparent/gh-pages/images/headerimage.jpg") fixed;
 }
 }
 
